@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ytf.demo.entity.User;
 import com.ytf.demo.service.RemoteService;
 
 @RestController
@@ -14,7 +15,7 @@ public class Controller {
     private RemoteService remoteService;
 
     @GetMapping("/getMe")
-    public ResponseEntity<String> getMe() {
+    public ResponseEntity<User> getMe() {
         return ResponseEntity.ok(remoteService.getMe("anything"));
     }
 }

@@ -6,4 +6,7 @@ server:
   port: 8764
 spring:
   application:
-    name: demo-ribbon
+    name: demo-openfeign
+feign:
+  hystrix:
+    enabled: true
